@@ -1,0 +1,9 @@
+.App {
+    background-color: rgb(61, 55, 55);
+    height: 100vh;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+}

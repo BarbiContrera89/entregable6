@@ -1,0 +1,77 @@
+.form {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 2;
+    background-color: rgb(244, 244, 244);
+    width: 95%;
+    padding: 10px;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 600px;
+    border: 1px solid #aaa5;
+    border-radius: 10px;
+}
+
+.form__input-password {
+    min-width: 150px;
+    border-radius: 5px;
+    border: 1px solid;
+    width: 100%;
+}
+
+.form__input-email {
+    min-width: 150px;
+    border-radius: 5px;
+    border: 1px solid;
+    width: 100%;
+}
+
+.form__btn {
+    background-color: #c53838;
+    color: #FFF;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-right: 5px;
+    grid-column: 5;
+}
+
+.form__password {
+    grid-column: 3/4;
+    grid-row: 1 / 2;
+}
+
+.form__email {
+    grid-column: 2;
+    grid-row: 1/2;
+}
+
+@media (max-width: 600px) {
+    .form {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .form__password {
+        grid-column: 1;
+        grid-row: 3/4;
+    }
+
+    .form__email {
+        grid-column: 1;
+        grid-row: 1/2;
+    }
+
+    .form__btn {
+        border: 1px solid;
+        border-radius: 5px;
+        margin-right: 5px;
+        grid-column: 1;
+        grid-row: 5;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
