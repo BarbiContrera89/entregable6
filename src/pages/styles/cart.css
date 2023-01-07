@@ -1,5 +1,5 @@
 .cart {
-    background-color: rgb(61, 55, 55)
+    background-color: rgb(61, 55, 55);
 }
 
 .cart__cartProduct {
@@ -33,29 +33,24 @@
     margin-top: 20px;
 }
 
-.cart__btn {
+.section__btn {
     width: 50%;
     height: 1.7rem;
     max-width: 600px;
     margin-top: 10px;
+    margin-bottom: 20px;
     border-radius: 8px;
     background-color: #e41f1f;
     transition: 0.2s ease;
 }
 
-.cart__btn:hover {
+.section__btn:hover {
     transform: scale(1.2);
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .cart__cartProduct {
         grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-@media (min-width: 600px) and (max-width: 900px) {
-    .cart__cartProduct {
-        grid-template-columns: repeat(2, 1fr);
     }
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles/filterPrice.css'
 
 const FilterPrice = ({ setInputPrice }) => {
 
@@ -21,22 +22,27 @@ const FilterPrice = ({ setInputPrice }) => {
                 from: inputFrom,
                 to: Infinity
             })
+        } else {
+            setInputPrice({
+                from: 0,
+                to: Infinity
+            })
         }
     }
 
     return (
-        <section>
-            <h2>Price</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="from">From</label>
-                    <input type="number" id='from' />
+        <section className='filterPrice'>
+            <h2 className='filterPrice__h2'>Price</h2>
+            <form className='filterPrice__form' onSubmit={handleSubmit}>
+                <div className='filterPrice__form-from'>
+                    <label className='filterPrice__form-fromLabel' htmlFor="from">From</label>
+                    <input className='filterPrice__form-fromInput' type="number" id='from' />
                 </div>
-                <div>
-                    <label htmlFor="to">To</label>
-                    <input type="number" id='to' />
+                <div className='filterPrice__form-to'>
+                    <label className='filterPrice__form-toLabel' htmlFor="to">To</label>
+                    <input className='filterPrice__form-toInput' type="number" id='to' />
                 </div>
-                <button>Apply</button>
+                <button className='filterPrice__form-btn'>Apply</button>
             </form>
         </section>
     )

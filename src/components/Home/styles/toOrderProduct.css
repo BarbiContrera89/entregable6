@@ -1,0 +1,12 @@
+.orderProducts__container {
+    margin: 10px;
+}
+
+.orderProduct__ascending-btn,
+.orderProduct__descending-btn {
+    margin: 5px;
+    background-color: #A52a2a;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}

@@ -1,0 +1,53 @@
+.filterPrice {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1;
+    margin-top: 10px;
+}
+
+.filterPrice__h2 {
+    grid-row: 1;
+    text-align: center;
+    border-bottom: 1px #505050 solid;
+    margin-top: 10px;
+}
+
+.filterPrice__form {
+    padding: 10px;
+}
+
+.filterPrice__form-from {
+    margin: 10px;
+}
+
+.filterPrice__form-fromLabel {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.filterPrice__form-fromInput {
+    max-width: 100%;
+    border: 1px solid #505050;
+    border-radius: 5px;
+}
+
+.filterPrice__form-toInput {
+    max-width: 100%;
+    border: 1px solid #505050;
+    border-radius: 5px;
+}
+
+.filterPrice__form-to {
+    margin: 10px;
+}
+
+.filterPrice__form-toLabel {
+    margin-right: 5px;
+}
+
+.filterPrice__form-btn {
+    border-radius: 3px;
+    background-color: #a52a2a;
+    color: #fff;
+    padding: 3px;
+}

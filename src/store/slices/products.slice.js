@@ -1,15 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { useDispatch } from "react-redux";
 
 const productsSlice = createSlice({
+
     name: 'products',
     initialState: null,
     reducers: {
-        setProductsGlobal: (state, action) => action.payload
+        setProductsGlobal: (state, action) => action.payload,
+        ascendingOrderProducts: state => {
+            state.sort((a, b) => +a.price - +b.price)
+        },
+        descendingOrderProducts: state => {
+            state.sort((a, b) => +b.price - +a.price)
+        }
     }
 })
 
-export const { setProductsGlobal } = productsSlice.actions
+export const { setProductsGlobal, ascendingOrderProducts, descendingOrderProducts } = productsSlice.actions
 
 export default productsSlice.reducer
 

@@ -1,9 +1,47 @@
 .App {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(61, 55, 55);
-    height: 100vh;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: 0;
 }
 
 .footer {
-    position: relative;
-    bottom: 0;
+    margin-top: auto;
+}
+
+.App__loading {
+    background-image: url(./assets/loading.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding: 2em;
+    border: 1px solid;
+    position: absolute;
+    z-index: 150;
+}
+
+.App__loading-close {
+    transition: 1s;
+    translate: -100%;
+}
+
+.routes {
+    margin-top: 55px;
+}
+
+@media (max-width: 900px) {
+    .App__loading {
+        display: flex;
+        background-image: url(./assets/loading2.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        padding: 2em;
+        border: 1px solid;
+        position: absolute;
+        z-index: 150;
+    }
 }

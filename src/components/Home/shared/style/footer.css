@@ -1,3 +1,8 @@
+.login {
+    max-width: 1163vh;
+    height: 74vh;
+}
+
 .footer {
     display: flex;
     justify-content: center;

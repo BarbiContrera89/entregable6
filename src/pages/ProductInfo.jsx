@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import CardProduct from '../components/Home/CardProduct'
 import ProductDescription from '../components/Home/productInfo/ProductDescription'
+import SliderImg from '../components/Home/productInfo/SliderImg'
+import './styles/productInfo.css'
 
 const ProductInfo = () => {
 
@@ -29,18 +31,18 @@ const ProductInfo = () => {
         }
     }, [allProducts, product])
 
-    console.log(product)
 
     return (
-        <div>
-            <ProductDescription product={product} />
-            <section>
-                <h2>Discover similar items</h2>
-                <div className='similar-products-container'>
+        <div className='productInfo'>
+            <SliderImg className='productInfo__sliderImg' listImgs={product?.productImgs} />
+            <ProductDescription className='productInfo__productDescription' product={product} />
+            <section className='productInfo__section'>
+                <h2 className='productInfo__h2'>Discover similar items</h2>
+                <div className='productInfo__similar-products-container'>
                     {
                         similarProducts?.map(simProd => {
                             if (simProd.title !== product.title) {
-                                return <CardProduct
+                                return <CardProduct className='productInfo__cardProduct'
                                     key={simProd.id}
                                     product={simProd}
                                 />

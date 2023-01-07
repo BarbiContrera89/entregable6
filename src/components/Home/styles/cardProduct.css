@@ -1,11 +1,13 @@
 .product {
-    background-color: rgb(244, 244, 244);
+    background-color: #eee;
     width: 100%;
     max-width: 280px;
     border: 1px solid #aaa5;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 20ms ease;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 .product:hover {
@@ -38,9 +40,9 @@
     opacity: 1;
 }
 
-
 .product__img {
     width: 80%;
+    max-width: 250px;
     height: 80%;
     object-fit: contain;
     position: absolute;
